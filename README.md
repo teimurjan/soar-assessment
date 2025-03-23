@@ -1,36 +1,80 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Soar Finance Dashboard
+
+A modern financial dashboard built with Next.js, showcasing best practices in web development and user interface design.
 
 ## Getting Started
 
-First, run the development server:
+### Requirements
+- Node.js (version 20 or higher recommended)
+- npm (version 10 or higher recommended)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/teimurjan/soar-assessment.git
+   cd soar-assessment
+   ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. **Install dependencies**
+   ```bash
+   npm i
+   ```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. **Run the development server**
+   ```bash
+   npm run dev
+   ```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## Architecture Decisions
+
+### Why Next.js?
+- **Server-Side Rendering**: Improves initial page load and SEO
+- **API Routes**: Enables backend functionality without separate server
+- **File-based Routing**: Simplifies navigation structure
+- **Built-in Optimizations**: Image optimization, code splitting, and more
+- **TypeScript Support**: Enhanced type safety and developer experience
+
+### Why shadcn/ui?
+- **Accessibility**: Built on Radix UI primitives for WCAG compliance
+- **Customization**: Tailwind CSS-based styling for easy theming
+- **Component Architecture**: Well-structured, reusable components
+- **Modern Design**: Clean, professional UI components
+- **Developer Experience**: Easy to implement and maintain
+
+### Data Flow
+1. **API Routes**: Located in `app/api/`
+   - Simulate backend endpoints
+   - Generate mock data using Faker.js
+   - TypeScript interfaces ensure type safety
+
+2. **State Management**:
+   - Redux Toolkit for predictable state updates
+   - Async thunks for API calls
+   - Type-safe actions and reducers
+
+3. **Mock Data Generation**:
+   - Faker.js creates realistic financial data
+   - Consistent data structure through TypeScript interfaces
+   - Easy to replace with real API endpoints
+
+## Available Scripts
+
+- `npm run dev`: Start development server with hot reload
+- `npm run build`: Create production build
+- `npm run start`: Start production server
+- `npm run lint`: Run ESLint
+- `npm run lint:fix`: Fix linting issues
 
 ## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+- [Next.js Documentation](https://nextjs.org/docs)
+- [shadcn/ui Documentation](https://ui.shadcn.com)
+- [Redux Toolkit Guide](https://redux-toolkit.js.org)
+- [Faker.js Guide](https://fakerjs.dev)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Deployment
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The easiest way to deploy this application is using the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Check out the [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
